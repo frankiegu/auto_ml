@@ -27,7 +27,7 @@ try:
         readme_text = read_file.readlines()
     # Change our README for pypi so we can get analytics tracking information for that separately
     readme_text = [row.decode() for row in readme_text]
-    readme_text[-1] = "[![Analytics](https://ga-beacon.appspot.com/UA-58170643-5/auto_ml/pypi)](https://github.com/igrigorik/ga-beacon)"
+    readme_text[-1] = "[![Analytics](https://ga-beacon.appspot.com/UA-58170643-5/auto_ml/aml_pypi)](https://github.com/igrigorik/ga-beacon)"
 
     long_description = pypandoc.convert(''.join(readme_text), 'rst', format='md')
 except ImportError:
@@ -41,7 +41,7 @@ except ImportError:
         long_description = f.read()
 
 setup(
-    name='auto_ml',
+    name='automl',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
